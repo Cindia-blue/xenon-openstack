@@ -59,7 +59,7 @@ public class DeploymentTaskService
     private static long DEFAULT_TASK_LIFETIME = 60;
 
     //public static final String FACTORY_LINK = ServiceUriPaths.CORE + "/deployment-tasks";
-    public static final String FACTORY_LINK = "/oms/deployment-tasks";
+    public static final String FACTORY_LINK = "/vio/deployment-tasks";
 
     /**
      * Create a default factory service that starts instances of this task service on POST.

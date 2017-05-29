@@ -17,7 +17,7 @@ import java.util.Map.Entry;
 public class DeploymentService extends StatefulService {
 
     //public static final String FACTORY_LINK = ServiceUriPaths.CORE + "/deployments";
-    public static final String FACTORY_LINK = "/oms/deployments";
+    public static final String FACTORY_LINK = "/vio/deployments";
 
     /**
      * Create a default factory service that starts instances of this service on POST.
@@ -91,7 +91,7 @@ public class DeploymentService extends StatefulService {
                             });
 
             sendRequest(createPost);
-            startPost.addResponseHeader("Location", UriUtils.buildUri(this.getHost(), "oms/deployments/" + task.endpoint).getPath());
+            startPost.addResponseHeader("Location", UriUtils.buildUri(this.getHost(), "vio/deployments/" + task.endpoint).getPath());
             startPost.setStatusCode(Operation.STATUS_CODE_ACCEPTED);
             startPost.complete();
         } else {
